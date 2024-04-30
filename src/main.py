@@ -10,7 +10,9 @@ app.config['FILES_PATH'] = FILES_PATH
 @app.route('/')
 def hello_world():
     return 'Hello World!'
-
+@app.route('/hack')
+def hack_route():
+    return ' you are hacked! N I'm <dileep and pranav>'
 @app.route('/download/<filename>')
 def download_file(filename):
     return send_from_directory(app.config['FILES_PATH'],
